@@ -1,0 +1,10 @@
+<div class="book-detail">
+  <div class="cover">
+    <img *ngIf="iclass && iclass.cover" [src]="iclass?.cover" alt="">
+    <img *ngIf="!iclass || !iclass.cover" src='assets/default.png' alt="">
+  </div>
+  <div class="detail">
+    <h3>{{iclass?.title}}</h3>
+    <button>GET IT NOW</button>
+  </div>
+</div>

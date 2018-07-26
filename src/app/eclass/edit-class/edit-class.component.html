@@ -1,0 +1,10 @@
+<div>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="iclass.title" placeholder="Title of Book">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput type="text" [(ngModel)]="iclass.cover" placeholder="Cover">
+  </mat-form-field>
+
+  <button  mat-raised-button color="primary" (click)="editClass(iclass)">Edit</button>
+</div>

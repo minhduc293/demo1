@@ -1,0 +1,3 @@
+<div class="container">
+  <input *ngIf="activated" type="search" placeholder="Search class" [(ngModel)]="keyword"  (blur)="onChange(keyword)" (change)="onChange(keyword)"> <button (click)="activated = !activated"><span class="fa fa-search"></span></button>
+</div>

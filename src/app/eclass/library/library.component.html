@@ -1,0 +1,19 @@
+<div class="header">
+  <h3>CLASS</h3>
+  <div>
+    <app-search-class [keyword]="keyword" (keywordChange)="onSearch($event)"></app-search-class>
+    <button (click)="openAddBookDialog()" class="control">
+      <span class="fa fa-plus"></span>
+    </button>
+  </div>
+</div>
+<div class="bookshelf">
+  <div class="iclass" *ngFor="let iclass of class">
+    <app-iclass [iclass]="iclass" (remove)="onRemove($event)"></app-iclass>
+  </div>
+  <div *ngIf="iclass?.length === 0" class="no-content">
+    No!!!
+  </div>
+</div>
+<mat-paginator [length]="length" [pageSize]="pageSize" [pageSizeOptions]="pageSizeOptions" (page)="pageEvent($event)">
+</mat-paginator>

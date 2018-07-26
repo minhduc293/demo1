@@ -1,0 +1,15 @@
+<div>
+  <mat-card>
+    <h2>Login</h2>
+    <form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+      <mat-form-field class="form-field">
+        <input matInput type="text" required pattern=".{3,8}" placeholder="Username" id="username" name="username" ngModel>
+      </mat-form-field>
+      <mat-form-field class="form-field">
+        <input matInput type="password" required maxlength="5" placeholder="Password" id="password" name="password" ngModel>
+      </mat-form-field>
+      <button type="submit" class="btn-login" mat-raised-button color="primary">Login</button>
+      <button type="button" class="btn-login" mat-raised-button color="warn">Register</button>
+    </form>
+  </mat-card>
+</div>

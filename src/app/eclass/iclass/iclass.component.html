@@ -1,0 +1,9 @@
+<div class="book"  (mouseleave)="hideBackdrop()">
+  <img [src]="iclass.cover" [alt]="iclass.title" (mouseenter)="showBackdrop()">
+  <h3 [routerLink]="['iclass', iclass.id]">{{iclass.title | uppercase}}</h3>
+  <button>GET IT NOW</button>
+  <div *ngIf="isBackdrop" class="backdrop">
+    <button (click)="openEditClassDialog(iclass)"><span class="fa fa-edit"></span></button>
+    <button (click)="openRemoveClassDialog(iclass)"><span class="fa fa-remove"></span></button>
+  </div>
+</div>
